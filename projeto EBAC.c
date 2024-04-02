@@ -45,8 +45,9 @@ int main ()
 		    break;
 		    
 		    case 4:
-		    printf("\t\tObrigado por utilizar o aplicativo!");
-		    return 0;
+		    printf("\t\tObrigado por utilizar o aplicativo!\n\n\n");
+		    system("pause");
+			return 0;
 		    break;
  			
 			default:
@@ -61,7 +62,12 @@ int main ()
 
 int registro()
 {
-	char arquivo[40];
+    int laco=1;
+	
+	for(laco=1;laco=1;)
+	{
+	
+    char arquivo[40];
 	char cpf[40];
 	char nome[40];
 	char sobrenome[40];
@@ -115,13 +121,59 @@ int registro()
 	file = fopen(arquivo, "a");
 	fprintf(file, " - ");
 	fclose(file);
+ 
+	printf("\t\tDeseja registrar mais usuário?\n");
+	printf("\t\tSe deseja adicionar mais usuário, digite(s), se não, digite (n).\n");
+    
+    getchar();
+    
+    char opcao;
+	opcao = getchar();
 	
-	system("pause");
+	switch (opcao)
+	{
+	  case 's':
+	   	printf("\t\tNovo usuário...\n");
+	   	break;
+	   	 
+	       case 'S':
+	    	printf("\t\tNovo usuário...\n");
+	   	    break;
 	
+	
+	  case 'n':
+    	printf("volte para o menu principal.\n\n");
+    	system("pause");
+		return 0;
+    	break;
+    		
+    		case 'N':
+    		printf("volte para o menu principal.\n\n");
+    		system("pause");
+			return 0;
+    		break;
+    		
+    	default:
+    		printf("opção invalida...\n\n");
+    	    system("pause");
+			return 0;
+    		break;
+    }
+   
+	system("pause");	
+    	
+    }
+
 }
+
 
 int consulta()
 {
+	int laco=1;
+	
+	for(laco=1;laco=1;)
+	{
+	
 	setlocale(LC_ALL,"portuguese");
 	
 	char cpf[40];
@@ -144,12 +196,54 @@ int consulta()
 		printf("%s", conteudo);	
 		printf("\n\n\n");
 	}
+	 printf("\t\tDeseja consultar mais um usuário?\n");
+	printf("\t\tSe deseja consultar mais usuário, digite(s), se não, digite (n).\n");
+    
+    getchar();
+    
+    char con;
+	con = getchar();
 	
-	system("pause");
+	switch (con)
+	{
+	  case 's':
+	   	printf("\t\tNovo usuário...\n");
+	   	break;
+	   	 
+	       case 'S':
+	    	printf("\t\tNovo usuário...\n");
+	   	    break;
+	
+	
+	  case 'n':
+    	printf("volte para o menu principal.\n\n");
+    	system("pause");
+		return 0;
+    	break;
+    		
+    		case 'N':
+    		printf("volte para o menu principal.\n\n");
+    		system("pause");
+			return 0;
+    		break;
+    		
+    	default:
+    		printf("opção invalida...\n\n");
+    	    system("pause");
+			return 0;
+    		break;
+    }
+    system("pause");
+    }
 }
 
 int deletar()
 {
+	int laco=1;
+	
+	for(laco=1;laco=1;)
+	{
+	
 	char cpf[40];
 	
 	printf("Digite o CPF do usuário a ser deletado: ");
@@ -193,12 +287,12 @@ int deletar()
     		break;
     	    
     	case 'n':
-    		printf("volte para o menu principal.\n\n");
+    		printf("Operação cançelada!.\n\n");
     		system("pause");
     		break;
     		
     		case 'N':
-    		printf("volte para o menu principal.\n\n");
+    		printf("Operação cançelada!.\n\n");
     		system("pause");
     		break;
     		
@@ -208,8 +302,47 @@ int deletar()
     		break;
 	}
     
+    printf("\t\tDeseja deletar mais um usuário?\n");
+	printf("\t\tSe deseja deletar mais usuário, digite(s), se não, digite (n).\n");
     
+    getchar();
     
+    char del;
+	del = getchar();
+	
+	switch (del)
+	{
+	  case 's':
+	   	printf("\t\tNovo usuário...\n");
+	   	break;
+	   	 
+	       case 'S':
+	    	printf("\t\tNovo usuário...\n");
+	   	    break;
+	
+	
+	  case 'n':
+    	printf("volte para o menu principal.\n\n");
+    	system("pause");
+		return 0;
+    	break;
+    		
+    		case 'N':
+    		printf("volte para o menu principal.\n\n");
+    		system("pause");
+			return 0;
+    		break;
+    		
+    	default:
+    		printf("opção invalida...\n\n");
+    	    system("pause");
+			return 0;
+    		break;
+    }
+   
+	system("pause");	
+    	
+    }
 	
 }
 
