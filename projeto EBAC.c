@@ -20,9 +20,9 @@ int main ()
 	    printf("\tEscolha a opcão desejada:\n\n");
 	    printf("\t\t1 - Registrar usuário\n");
 	    printf("\t\t2 - Consultar usuário\n");
-	    printf("\t\t3 - Deletar usuário\n\n");
-	
-        printf("\t\tJesus Cristo seja louvado\n");
+	    printf("\t\t3 - Deletar usuário\n");
+	    printf("\t\t4 - Sair do Cartorio\n\n");
+	    printf("\t\tJesus Cristo seja louvado\n");
     
         printf("opção: ");
     
@@ -43,7 +43,12 @@ int main ()
 			case 3:
 			deletar();
 		    break;
-			
+		    
+		    case 4:
+		    printf("\t\tObrigado por utilizar o aplicativo!");
+		    return 0;
+		    break;
+ 			
 			default:
 			printf("esta opção não existe.\n");
 	    	system("pause");
