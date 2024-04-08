@@ -8,56 +8,70 @@ int main ()
 	
 	int opcao=0;
 	int laco=1;
+	char senha[10]= "a";
+	int comp;
 	
-	for(laco=1;laco=1;)
+	printf("\t| Cartório da EBAC |\n\n");
+	printf("\tLogin de adiministrador\n\nDigite sua senha: \n");
+	scanf("%s",senha);
+	
+	comp = strcmp(senha, "admin");
+	
+	if(comp == 0)
 	{
-	
-	    system("cls");
-	    
-	    setlocale(LC_ALL,"portuguese");
-	
-	    printf ("\t| Cartório da EBAC |\n\n");
-	    printf("\tEscolha a opcão desejada:\n\n");
-	    printf("\t\t1 - Registrar usuário\n");
-	    printf("\t\t2 - Consultar usuário\n");
-	    printf("\t\t3 - Deletar usuário\n");
-	    printf("\t\t4 - Sair do Cartorio\n\n");
-	    printf("\t\tJesus Cristo seja louvado\n");
-    
-        printf("opção: ");
-    
-        scanf ("%d", &opcao);
-    
-        system("cls");
-        
-        switch(opcao)
+		system("cls");
+		for(laco=1;laco=1;)
 		{
-			case 1:
-			registro();
-			break;
-			
-			case 2:
-			consulta();
-			break;
-			
-			case 3:
-			deletar();
-		    break;
-		    
-		    case 4:
-		    printf("\t\tObrigado por utilizar o aplicativo!\n\n\n");
-		    system("pause");
-			return 0;
-		    break;
- 			
-			default:
-			printf("esta opção não existe.\n");
-	    	system("pause");
-			break;	
-		}
-        
+	    	system("cls");
+	    
+	    	setlocale(LC_ALL,"portuguese");
 	
-    }
+	    	printf ("\t| Cartório da EBAC |\n\n");
+	    	printf("\tEscolha a opcão desejada:\n\n");
+	    	printf("\t\t1 - Registrar usuário\n");
+	    	printf("\t\t2 - Consultar usuário\n");
+	    	printf("\t\t3 - Deletar usuário\n");
+	    	printf("\t\t4 - Sair do Cartorio\n\n");
+	    	printf("\t\tJesus Cristo seja louvado\n");
+    
+        	printf("opção: ");
+    
+        	scanf ("%d", &opcao);
+    
+        	system("cls");
+        
+        	switch(opcao)
+			{
+				case 1:
+				registro();
+				break;
+			
+				case 2:
+				consulta();
+				break;
+			
+				case 3:
+				deletar();
+			    break;
+		    
+			    case 4:
+			    printf("\t\tObrigado por utilizar o aplicativo!\n\n\n");
+			    system("pause");
+				return 0;
+			    break;
+ 			
+				default:
+				printf("esta opção não existe.\n");
+	    		system("pause");
+				break;	
+			}
+    	}
+	}
+	
+	
+	else
+		printf("\tSenha incorreta!\n\n");
+	
 }
 
 int registro()
